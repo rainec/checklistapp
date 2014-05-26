@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="TVCCDC Checklists">
+	<title>TVCCDC Checklists</title>
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+	<link rel="stylesheet" href="my-theme.css">
+	<link rel="stylesheet" href="jquery.mobile.icons.min.css">
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+
+	
+
+</head>
+<body>
+	
+	<!-- home page -->
+
+	<div data-role="page" id="home">
+		<header data-role="header">
+			<h1>Checklists</h1>
+		</header>
+		<article data-role="content">
+			<ul data-role="listview" data-filter="true">
+				<li><a href="#win-workstation"><h1>Windows Workstation</h1></a></li>
+				<li><a href="#win-server"><h1>Windows Server</h1></a></li>
+				<li><a href="#linux-server"><h1>Linux Server</h1></a></li>
+			</ul>
+		</article>	
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+				</ul>
+			</nav>	
+		</footer>
+	</div>
+	
+	<!-- workstation page -->
+
+	<div data-role="page" id="win-workstation">
+		<header data-role="header">
+			<h1>Windows Workstation</h1>
+		</header>
+		<article data-role="content">
+			<label for="first"><input type="checkbox">Wait for DC person to create user accounts</label>
+			<label for="first"><input type="checkbox">Login and change your password</label>
+			<label for="first"><input type="checkbox">Change local admin password</label>
+			<label for="first"><input type="checkbox">Disable all other local accounts</label>
+			<label for="first"><input type="checkbox">Install XNetstat-Pro</label>
+			<label for="first"><input type="checkbox">Install Microsoft Security Essentials</label>
+			<label for="first"><input type="checkbox">Install Belarc Advisor and check for severe patches</label>
+			<label for="first"><input type="checkbox">Run Windows Update (No Service Packs!) [KB2621440 &amp; KB2667402 first]</label>
+			<label for="first"><input type="checkbox">Work on local firewall rules</label>
+			<label for="first"><input type="checkbox">Continue to patch and monitor</label>
+		</article>	
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+				</ul>
+			</nav>	
+		</footer>
+	</div>
+
+	<!-- windows server page -->
+
+	<div data-role="page" id="win-server">
+		<header data-role="header">
+			<h1>Windows Servers</h1>
+		</header>
+		<article data-role="content">
+			<ul data-role="listview" data-filter="true">
+				<li><a href="#domain-controller"><h1>Domain Controller</h1></a></li>
+				<li><a href="#win-database"><h1>Database Server</h1></a></li>
+				<li><a href="#win-file"><h1>File Server</h1></a></li>
+				<li><a href="#win-web"><h1>Web Server</h1></a></li>
+			</ul>
+		</article>	
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+				</ul>
+			</nav>	
+		</footer>
+	</div>
+
+	<!-- domain controller page -->
+
+	<div data-role="page" id="domain-controller">
+		<header data-role="header">
+			<h1>Domain Controller</h1>
+		</header>
+		<article data-role="content">
+			<label for="first"><input type="checkbox">Login as administrator</label>
+			<label for="first"><input type="checkbox">Change administrator password</label>
+			<label for="first"><input type="checkbox">Create user accounts with complex passwords/change passwords for already existing user accounts</label>
+			<label for="first"><input type="checkbox">Logout and Log back in with new credentials</label>
+			<label for="first"><input type="checkbox">Change passwords for every account in AD</label>
+			<label for="first"><input type="checkbox">Install XNetstat-Pro</label>
+			<label for="first"><input type="checkbox">Retrieve and install Sophos AV from file server</label>
+			<label for="first"><input type="checkbox">Install Belarc Advisor to find severe patches</label>
+			<label for="first"><input type="checkbox">Run Windows Update (No Service Packs!) [KB2621440 &amp; KB2667402 first]</label>
+			<label for="first"><input type="checkbox">Add GPOs for passwords and login attempts</label>
+			<label for="first"><input type="checkbox">Work on local firewall rules</label>
+			<label for="first"><input type="checkbox">Continue to patch and monitor</label>
+		</article>	
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+				</ul>
+			</nav>	
+		</footer>
+	</div>
+
+	<!-- windows database server page -->
+
+	<div data-role="page" id="win-database">
+		<header data-role="header">
+			<h1>Database Server</h1>
+		</header>
+		<article data-role="content">
+			<label for="first"><input type="checkbox">Wait for DC person to create your account</label>
+			<label for="first"><input type="checkbox">Login as your user and change password</label>
+			<label for="first"><input type="checkbox">Change local admin password</label>
+			<label for="first"><input type="checkbox">Install XNetstat-Pro</label>
+			<label for="first"><input type="checkbox">Retrieve and install Sophos AV from file server</label>
+			<label for="first"><input type="checkbox">Install Belarc Advisor to find severe patches</label>
+			<label for="first"><input type="checkbox">Run Windows Update (No Service Packs!) [KB2621440 &amp; KB2667402 first]</label>
+			<label for="first"><input type="checkbox">Backup database and store on file server and/or workstation</label>
+			<label for="first"><input type="checkbox">Change database admin and user passwords</label>
+			<label for="first"><input type="checkbox">Install Acronis on separate machine to backup the server</label>
+			<label for="first"><input type="checkbox">Work on local firewall rules</label>
+			<label for="first"><input type="checkbox">Continue to patch and monitor</label>
+		</article>	
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+				</ul>
+			</nav>	
+		</footer>
+	</div>
+
+
+	<!-- file server page -->
+
+	<div data-role="page" id="win-file">
+		<header data-role="header">
+			<h1>File Server</h1>
+		</header>
+		<article data-role="content">
+			<label for="first"><input type="checkbox">Wait for DC person to create your account</label>
+			<label for="first"><input type="checkbox">Login as your user and change password</label>
+			<label for="first"><input type="checkbox">Change local admin password</label>
+			<label for="first"><input type="checkbox">Install XNetstat-Pro</label>
+			<label for="first"><input type="checkbox">Retrieve Sophos AV from the interwebs</label>
+			<label for="first"><input type="checkbox">Install Sophos AV</label>
+			<label for="first"><input type="checkbox">Create share for Sophos AV</label>
+			<label for="first"><input type="checkbox">Install Belarc Advisor to find severe patches</label>
+			<label for="first"><input type="checkbox">Run Windows Update (No Service Packs!) [KB2621440 &amp; KB2667402 first]</label>
+			<label for="first"><input type="checkbox">Work on local firewall rules</label>
+			<label for="first"><input type="checkbox">Continue to patch and monitor</label>
+		</article>	
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+				</ul>
+			</nav>	
+		</footer>
+	</div>
+
+
+	<!-- IIS server page -->
+
+	<div data-role="page" id="win-web">
+		<header data-role="header">
+			<h1>IIS Server</h1>
+		</header>
+		<article data-role="content">
+			<label for="first"><input type="checkbox">Wait for DC person to create your account</label>
+			<label for="first"><input type="checkbox">Login as your user and change password</label>
+			<label for="first"><input type="checkbox">Change local admin password</label>
+			<label for="first"><input type="checkbox">Install XNetstat-Pro</label>
+			<label for="first"><input type="checkbox">Retrieve and install Sophos AV from file server</label>
+			<label for="first"><input type="checkbox">Install Belarc Advisor to find severe patches</label>
+			<label for="first"><input type="checkbox">Run Windows Update (No Service Packs!) [KB2621440 &amp; KB2667402 first]</label>
+			<label for="first"><input type="checkbox">Scan site and fix issues with Accunetix</label>
+			<label for="first"><input type="checkbox">Work on local firewall rules</label>
+			<label for="first"><input type="checkbox">Continue to patch and monitor</label>
+		</article>	
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+				</ul>
+			</nav>	
+		</footer>
+	</div>
+
+	<!-- Linux Server page -->
+
+	<div data-role="page" id="linux-server">
+		<header data-role="header">
+			<h1>Linux Servers</h1>
+		</header>
+		<article data-role="content">
+			<ul data-role="listview" data-filter="true">
+				<li><a href="#mysql"><h1>MySQL</h1></a></li>
+				<li><a href="#apache"><h1>Apache</h1></a></li>
+				<li><a href="#mail"><h1>Mail</h1></a></li>
+			</ul>
+		</article>	
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+				</ul>
+			</nav>	
+		</footer>
+	</div>
+
+	<!-- MySQL server page -->
+
+	<div data-role="page" id="mysql">
+		<header data-role="header">
+			<h1>MySQL Server</h1>
+		</header>
+		<article data-role="content">
+			<label for="first"><input type="checkbox">Wait for DC person to create your account</label>
+			<label for="first"><input type="checkbox">Login as your user and change password</label>
+			<label for="first"><input type="checkbox">Change local admin password</label>
+			<label for="first"><input type="checkbox">Block Telnet</label>
+			<label for="first"><input type="checkbox">Change password for all users/services</label>
+			<label for="first"><input type="checkbox">Regenerate SSH keys</label>
+			<label for="first"><input type="checkbox">Install Clam AV</label>
+			<label for="first"><input type="checkbox">Update the system</label>
+			<label for="first"><input type="checkbox">Backup database and save on file server and/or workstation</label>
+			<label for="first"><input type="checkbox">Change database admin/user passwords</label>
+			<label for="first"><input type="checkbox">Remove X-Server</label>
+			<label for="first"><input type="checkbox">Remove VNC</label>
+			<label for="first"><input type="checkbox">Use Acronis to backup server on separate machine</label>
+			<label for="first"><input type="checkbox">Work on iptables rules</label>
+			<label for="first"><input type="checkbox">Continue to patch and monitor</label>
+		</article>	
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+				</ul>
+			</nav>	
+		</footer>
+	</div>
+
+
+	<!-- apache server page -->
+
+	<div data-role="page" id="apache">
+		<header data-role="header">
+			<h1>Apache Server</h1>
+		</header>
+		<article data-role="content">
+			<label for="first"><input type="checkbox">Wait for DC person to create your account</label>
+			<label for="first"><input type="checkbox">Login as your user and change password</label>
+			<label for="first"><input type="checkbox">Change local admin password</label>
+			<label for="first"><input type="checkbox">Block Telnet</label>
+			<label for="first"><input type="checkbox">Change password for all users/services</label>
+			<label for="first"><input type="checkbox">Regenerate SSH keys</label>
+			<label for="first"><input type="checkbox">Install Clam AV</label>
+			<label for="first"><input type="checkbox">Update the system</label>
+			<label for="first"><input type="checkbox">Install mod_security</label>
+			<label for="first"><input type="checkbox">Disable PHPmyadmin</label>
+			<label for="first"><input type="checkbox">Use accunetix and scan site to find vulnerabilities</label>
+			<label for="first"><input type="checkbox">Remove X-Server</label>
+			<label for="first"><input type="checkbox">Remove VNC</label>
+			<label for="first"><input type="checkbox">Use Acronis to backup server on separate machine</label>
+			<label for="first"><input type="checkbox">Work on iptables rules</label>
+			<label for="first"><input type="checkbox">Continue to patch and monitor</label>
+		</article>	
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+				</ul>
+			</nav>	
+		</footer>
+	</div>
+
+
+	<!-- mail server page -->
+
+	<div data-role="page" id="mail">
+		<header data-role="header">
+			<h1>Mail Server</h1>
+		</header>
+		<article data-role="content">
+			<label for="first"><input type="checkbox">Wait for DC person to create your account</label>
+			<label for="first"><input type="checkbox">Login as your user and change password</label>
+			<label for="first"><input type="checkbox">Change local admin password</label>
+			<label for="first"><input type="checkbox">Block Telnet</label>
+			<label for="first"><input type="checkbox">Change password for all users/services</label>
+			<label for="first"><input type="checkbox">Regenerate SSH keys</label>
+			<label for="first"><input type="checkbox">Install Clam AV</label>
+			<label for="first"><input type="checkbox">Update the system</label>
+			<label for="first"><input type="checkbox">Remove X-Server</label>
+			<label for="first"><input type="checkbox">Remove VNC</label>
+			<label for="first"><input type="checkbox">Use Acronis to backup server on separate machine</label>
+			<label for="first"><input type="checkbox">Work on iptables rules</label>
+			<label for="first"><input type="checkbox">Continue to patch and monitor</label>
+		</article>	
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+				</ul>
+			</nav>	
+		</footer>
+	</div>
+
+
+</body>
+</html>
